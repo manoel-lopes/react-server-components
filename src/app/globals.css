@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button, svg {
+  cursor: pointer;
+}
+
+@layer base{
+  body {
+      @apply dark:bg-neutral-800 bg-zinc-200
+  }
+}
