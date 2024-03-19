@@ -2,12 +2,12 @@ import axios from 'axios'
 
 import { Task } from '@/core/entities/task'
 import { Header } from '@/components/header'
-import { TaskList } from '@/components/task-lis'
+import { TaskList } from '@/components/task-list'
 
 export default async function Home() {
   async function handleTaskUpdate(id: string, newTaskData: Task) {
     'use server'
-    await axios.put(`http://localhost:3333/tasks/${id}`, newTaskData)
+    await axios.put<Task>(`http://localhost:3333/tasks/${id}`, newTaskData)
   }
 
   async function handleTaskDelete(id: string) {
@@ -17,6 +17,7 @@ export default async function Home() {
 
   const response = await axios.get<Task[]>('http://localhost:3333/tasks')
   const tasks = response.data
+
   return (
     <>
       <Header />
