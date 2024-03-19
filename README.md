@@ -6,7 +6,7 @@ Algumas das principais vantagens da arquitetura de Server Components são mover 
 ## Client Components
 
 Os Client Components são utilizados para incluir interações na parte do cliente da uma aplicação, como ações do usuário e alterações de estado. Esses componentes podem ser pré-renderizados no servidor e depois “hidratados” no cliente através da diretiva “use client”.
-O processo de Hidratação occorre quando o React realiza uma "injeção" os valores como JSON e as instruções JavaScript no HTML renderizado, tornando assim a página interativa.
+O processo de Hidratação occorre quando o React realiza uma "injeção" os valores como instruções JavaScript no HTML renderizado, tornando assim a página interativa.
 O princpial objetivo da utilização seria encapsular apenas a parte do componente que necessita de interatividade, evitando excesso de JavaScript no navegador.
 
 <p align="center">
